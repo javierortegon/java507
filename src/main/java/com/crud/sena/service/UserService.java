@@ -16,4 +16,21 @@ public class UserService {
     public List<User> getUsers(){
         return iUserRepository.findAll();
     }
+
+    public User saveUser(User user){
+        return iUserRepository.save(user);
+    }
+
+    public User getUser(Long id){
+        return iUserRepository.findById(id).get();
+    }
+
+    public User updateUser(User user){
+        return iUserRepository.save(user);
+    }
+
+    public void deleteUser(Long id){
+        iUserRepository.deleteById(id);
+    }
+
 }
