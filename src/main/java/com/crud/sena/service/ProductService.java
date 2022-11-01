@@ -14,7 +14,8 @@ public class ProductService {
     private IProductRepository iProductRepository;
 
     public List<Product> getProducts(){
-        return iProductRepository.findAll();
+        List<Product> products = iProductRepository.findAll();
+        return products;
     }
 
     public Product saveProduct(Product product){
